@@ -6,7 +6,7 @@ header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // 🔴 LIVE Paystack secret key (KEEP THIS SECURE ON SERVER)
-$secret_key = ' ';
+$secret_key = 'pk_live_e1272333bf0cea881a01d82093937c5739731229';
 
 // Get POST data
 $input = json_decode(file_get_contents('php://input'), true);
@@ -85,4 +85,5 @@ if ($result['status'] && $result['data']['status'] === 'success') {
 } else {
     echo json_encode(['status' => 'error', 'message' => 'Payment verification failed']);
 }
+
 ?>
